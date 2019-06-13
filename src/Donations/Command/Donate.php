@@ -23,14 +23,37 @@ class Donate extends BaseCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $packageArgument = $input->getArgument('package');
-
         $packages = $this->getComposer()->getRepositoryManager()->getLocalRepository()->getCanonicalPackages();
-        foreach ($packages as $package) {
-            if ($package->getName() === $packageArgument) {
-                $force = (bool) $input->getOption('yes');
-                return $this->donateTo($package, $force, $input, $output);
-            }
+
+        $selectedPackage = null;
+        if (\is_numeric($packageArgument)) {
+            $packages = \array_filter($packages, function(PackageInterface $package) {
+                return !empty($package->getExtra()['donations']);
+            });
+            $selectedPackage = $packages[(int) $packageArgument - 1] ?? null;
+        } else {
+            foreach ($packages as $package) {
+                if ($package->getName() === $packageArgument) 
+                {
+                    $selectedPackage = $package;
+                    break;
+                }
+            }    
         }
+
+        $result = 0;
+        if ($selectedPackage) {
+            $force = (bool) $input->getOption('yes');
+            $result = $this->donateTo($selectedPackage, $force, $input, $output);
+        } else {
+            throw new \ErrorException(
+                "Couldn't find the requested package, please double-check the package name and try again."
+            );
+
+            $result = 1;
+        }
+
+        return $result;
     }
 
     /**

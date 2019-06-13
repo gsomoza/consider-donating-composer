@@ -56,6 +56,7 @@ final class PromoterPlugin implements PluginInterface, EventSubscriberInterface
 
         $localRepo = $this->composer->getRepositoryManager()->getLocalRepository();
         $packages = $localRepo->getCanonicalPackages();
+        $i = 1;
         foreach ($packages as $package) {
             /** @var $package \Composer\Package\PackageInterface */
             $extra = $package->getExtra();
@@ -69,7 +70,8 @@ final class PromoterPlugin implements PluginInterface, EventSubscriberInterface
                 }
     
                 if ($shouldOutput) {
-                    $this->io->write('    * ' . $package->getName());
+                    $this->io->write(\sprintf('    (%s) %s ', $i, $package->getName()));
+                    $i++;
                 }
             }
         }
