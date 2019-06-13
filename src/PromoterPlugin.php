@@ -5,12 +5,15 @@
 namespace Gabriel\ConsiderDonating;
 
 use Composer\Composer;
+use Composer\IO\ConsoleIO;
 use Composer\Script\Event;
 use Composer\IO\IOInterface;
 use Composer\Script\ScriptEvents;
 use Composer\Plugin\PluginInterface;
+use Symfony\Component\Console\Input\ArrayInput;
 use Composer\EventDispatcher\EventSubscriberInterface;
 use Gabriel\ConsiderDonating\Promoter\PromoterService;
+use Gabriel\ConsiderDonating\Donations\Command\PrintList;
 
 /**
  * The purpose of this plugin is to promote opportunities for donations to Composer users.
@@ -52,34 +55,24 @@ final class PromoterPlugin implements PluginInterface, EventSubscriberInterface
      */
     public function onPostAutoloadDump(Event $event)
     {
-        $shouldOutput = false;
+        // TODO: this is an ugly way of extracting the symfony output object - try to find a better way
+        // ideally by finding the instance of the symfony console application
+        $klass = new class extends ConsoleIO {
+            public function __construct() {}
 
-        $localRepo = $this->composer->getRepositoryManager()->getLocalRepository();
-        $packages = $localRepo->getCanonicalPackages();
-        $i = 1;
-        foreach ($packages as $package) {
-            /** @var $package \Composer\Package\PackageInterface */
-            $extra = $package->getExtra();
-            if (isset($extra['donations'])) {
-                if (!$shouldOutput) {
-                    $shouldOutput = true; // there's at least one package that requests donations
-                    // intro message
-                    $this->io->write(''); // ensure we start on a new line (some dump commands don't end on EOL)
-                    $this->io->write('Your project depends on the generous work of real people.');
-                    $this->io->write('Please consider donating to the following open-source projects:' . PHP_EOL);
-                }
-    
-                if ($shouldOutput) {
-                    $this->io->write(\sprintf('    (%s) %s ', $i, $package->getName()));
-                    $i++;
-                }
+            public static function getOutput(ConsoleIO $io) {
+                return $io->output;
             }
-        }
+        };
 
-        if ($shouldOutput) {
-            $this->io->write('');
-            $this->io->write('To donate, simply run "composer donate package/name"');
-            // $this->io->write('To see a list of projects you already support, run "composer list-donations [package/name]"');
-        }
+        $input = new ArrayInput([]);
+        $output = $klass::getOutput($this->io);
+
+        $command = new PrintList();
+        $command->setComposer($this->composer);
+
+        $output->writeln('');
+
+        $command->run($input, $output);
     }
 }
