@@ -1,5 +1,5 @@
 {
-    "name": "gabriel/consider-donating",
+    "name": "gsomoza/consider-donating",
     "description": "A common protocol for gathering donations for your OSS package via Composer.",
     "type": "composer-plugin",
     "license": "MIT",
@@ -11,6 +11,25 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "composer-plugin-api": "^1.1"
+        "composer-plugin-api": "^1.1",
+        "symfony/process": "^4.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gabriel\\ConsiderDonating\\": "src/"
+        }
+    },
+    "extra": {
+        "class": [
+            "\\Gabriel\\ConsiderDonating\\DonationsPlugin",
+            "\\Gabriel\\ConsiderDonating\\PromoterPlugin"
+        ],
+        "donations": {
+            "url": "https://www.patreon.com/somoza"
+        }
+        
     }
 }
