@@ -1,5 +1,5 @@
 <?php
-namespace Gabriel\ConsiderDonating\Donations\Command;
+namespace Gabriel\ConsiderDonating\Command;
 
 use Composer\Command\BaseCommand;
 use Composer\Package\PackageInterface;

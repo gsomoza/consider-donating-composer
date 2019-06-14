@@ -1,9 +1,9 @@
 <?php
-namespace Gabriel\ConsiderDonating\Donations;
+namespace Gabriel\ConsiderDonating;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderCapability;
-use Gabriel\ConsiderDonating\Donations\Command\Donate;
-use Gabriel\ConsiderDonating\Donations\Command\PrintList;
+use Gabriel\ConsiderDonating\Command\Donate;
+use Gabriel\ConsiderDonating\Command\PrintList;
 
 final class CommandProvider implements CommandProviderCapability
 {
