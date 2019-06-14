@@ -34,7 +34,7 @@ As a package developer, you can prompt your users to donate to your package by d
 
 That's it! When someone installs your package they will see a message on their terminal, like the following:
 ```
-Your project depends on the generous work of real people and organizations.
+Your project depends on the generous work of real people.
 Please consider donating to the following open-source projects:
 
     * gabriel/consider-donating
