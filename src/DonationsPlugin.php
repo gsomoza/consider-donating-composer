@@ -1,12 +1,12 @@
 <?php
-namespace Gabriel\ConsiderDonating;
+namespace Somoza\ConsiderDonating;
 
 use Composer\Plugin\Capability\CommandProvider as ComposerCommandProvider;
 use Composer\Plugin\PluginInterface;
 use Composer\Plugin\Capable;
 use Composer\Composer;
 use Composer\IO\IOInterface;
-use Gabriel\ConsiderDonating\CommandProvider as DonationsCommandProvider;
+use Somoza\ConsiderDonating\CommandProvider as DonationsCommandProvider;
 
 /**
  * Provides commands for managing donations

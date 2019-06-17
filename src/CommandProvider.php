@@ -1,9 +1,10 @@
 <?php
-namespace Gabriel\ConsiderDonating;
+namespace Somoza\ConsiderDonating;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderCapability;
-use Gabriel\ConsiderDonating\Command\Donate;
-use Gabriel\ConsiderDonating\Command\PrintList;
+use Somoza\ConsiderDonating\Command\Authenticate;
+use Somoza\ConsiderDonating\Command\Donate;
+use Somoza\ConsiderDonating\Command\PrintList;
 
 final class CommandProvider implements CommandProviderCapability
 {
@@ -15,6 +16,7 @@ final class CommandProvider implements CommandProviderCapability
         return [
             new Donate(),
             new PrintList(),
+            new Authenticate(),
         ];
     }
 }

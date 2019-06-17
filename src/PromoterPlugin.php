@@ -2,7 +2,7 @@
 /**
  * (c) 2019 – Gabriel Somoza (gabriel@somoza.me)
  */
-namespace Gabriel\ConsiderDonating;
+namespace Somoza\ConsiderDonating;
 
 use Composer\Composer;
 use Composer\IO\ConsoleIO;
@@ -10,11 +10,11 @@ use Composer\Script\Event;
 use Composer\IO\IOInterface;
 use Composer\Script\ScriptEvents;
 use Composer\Plugin\PluginInterface;
-use Gabriel\ConsiderDonating\Command\Common\DonationPromptMessages;
+use Somoza\ConsiderDonating\Command\Common\DonationPromptMessages;
 use Symfony\Component\Console\Input\ArrayInput;
 use Composer\EventDispatcher\EventSubscriberInterface;
-use Gabriel\ConsiderDonating\Donations\ComposerHelper;
-use Gabriel\ConsiderDonating\Command\PrintList;
+use Somoza\ConsiderDonating\Donations\ComposerHelper;
+use Somoza\ConsiderDonating\Command\PrintList;
 
 /**
  * The purpose of this plugin is to promote opportunities for donations to Composer users.

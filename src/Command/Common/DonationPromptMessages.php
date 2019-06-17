@@ -1,9 +1,9 @@
 <?php
-namespace Gabriel\ConsiderDonating\Command\Common;
+namespace Somoza\ConsiderDonating\Command\Common;
 
 use Composer\Package\PackageInterface;
 use Composer\Repository\WritableRepositoryInterface;
-use Gabriel\ConsiderDonating\Donations\ComposerHelper;
+use Somoza\ConsiderDonating\Donations\ComposerHelper;
 
 class DonationPromptMessages
 {

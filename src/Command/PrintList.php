@@ -1,10 +1,10 @@
 <?php
-namespace Gabriel\ConsiderDonating\Command;
+namespace Somoza\ConsiderDonating\Command;
 
 use Composer\Command\BaseCommand;
 use Composer\Package\PackageInterface;
-use Gabriel\ConsiderDonating\Command\Common\DonationPromptMessages;
-use Gabriel\ConsiderDonating\Donations\ComposerHelper;
+use Somoza\ConsiderDonating\Command\Common\DonationPromptMessages;
+use Somoza\ConsiderDonating\Donations\ComposerHelper;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;

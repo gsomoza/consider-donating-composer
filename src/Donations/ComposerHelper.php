@@ -1,5 +1,5 @@
 <?php
-namespace Gabriel\ConsiderDonating\Donations;
+namespace Somoza\ConsiderDonating\Donations;
 
 use Composer\Package\PackageInterface;
 

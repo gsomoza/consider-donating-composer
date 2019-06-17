@@ -1,8 +1,9 @@
 <?php
-namespace Gabriel\ConsiderDonating\Command;
+namespace Somoza\ConsiderDonating\Command;
 
 use Composer\Command\BaseCommand;
 use Composer\Package\PackageInterface;
+use Somoza\ConsiderDonating\Command\Common\OpenProcessFactory;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -41,7 +42,6 @@ class Donate extends BaseCommand
             }    
         }
 
-        $result = 0;
         if ($selectedPackage) {
             $force = (bool) $input->getOption('yes');
             $result = $this->donateTo($selectedPackage, $force, $input, $output);
@@ -94,10 +94,9 @@ class Donate extends BaseCommand
                 return 0;
             }
         }
-        
-        $command = \strtolower(\substr(\php_uname('s'), 0, 3)) === 'win' ? 'start' : 'open';
-        $process = new Process($command . ' ' . $url);
-        $process->run();
+
+        $processFactory = new OpenProcessFactory();
+        $processFactory->create([$url])->run();
 
         return 0;
     }
