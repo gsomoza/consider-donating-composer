@@ -12,10 +12,9 @@
     "minimum-stability": "stable",
     "require": {
         "ext-json": "*",
+        "somoza/cli-auth": "^0.1.1",
         "composer-plugin-api": "^1.1",
-        "symfony/process": "^4.0",
-        "webmozart/assert": "^1.4",
-        "somoza/cli-auth": "^0.1.0"
+        "webmozart/assert": "^1.4"
     },
     "require-dev": {
         "composer/composer": "^1.8"
