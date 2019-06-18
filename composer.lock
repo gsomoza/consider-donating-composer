@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d1da178c5849d2097b432727efafb94",
+    "content-hash": "87c4bdc487fe10411649156dde95b25d",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -669,16 +669,16 @@
         },
         {
             "name": "somoza/composer-plugin-file-loader",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gsomoza/composer-plugin-file-loader.git",
-                "reference": "a544c9bb12422552c9db1f1a9afddabec90877ca"
+                "reference": "2f4a59bbbebf154462cf95b913b0e0b009bf6b5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gsomoza/composer-plugin-file-loader/zipball/a544c9bb12422552c9db1f1a9afddabec90877ca",
-                "reference": "a544c9bb12422552c9db1f1a9afddabec90877ca",
+                "url": "https://api.github.com/repos/gsomoza/composer-plugin-file-loader/zipball/2f4a59bbbebf154462cf95b913b0e0b009bf6b5e",
+                "reference": "2f4a59bbbebf154462cf95b913b0e0b009bf6b5e",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +704,7 @@
                 }
             ],
             "description": "Provides a trait for Composer plugins to help load any files that Composer would not autoload correctly. Workaround for composer/composer#8192",
-            "time": "2019-06-18T00:30:01+00:00"
+            "time": "2019-06-18T00:52:53+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
