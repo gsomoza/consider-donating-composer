@@ -6,6 +6,7 @@ use Composer\Plugin\PluginInterface;
 use Composer\Plugin\Capable;
 use Composer\Composer;
 use Composer\IO\IOInterface;
+use Somoza\ComposerPluginFileLoader\PackageFileLoader;
 use Somoza\ConsiderDonating\CommandProvider as DonationsCommandProvider;
 
 /**
@@ -13,12 +14,15 @@ use Somoza\ConsiderDonating\CommandProvider as DonationsCommandProvider;
  */
 final class DonationsPlugin implements PluginInterface, Capable
 {
+    const AUTOLOAD_FILES_PACKAGES = ['ringcentral/psr7', 'react/promise', 'react/promise-stream'];
+
     /**
      * @inheritDoc
      */
     public function activate(Composer $composer, IOInterface $io)
     {
-        // nothing for now
+        $packageFileLoader = new PackageFileLoader($composer);
+        $packageFileLoader->load(self::AUTOLOAD_FILES_PACKAGES);
     }
 
     /**
