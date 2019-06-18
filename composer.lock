@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ca5a4ed70cab5b8b26fd3aa6893451c",
+    "content-hash": "24bbe5a63f8c4432c74211d9879eed25",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -625,16 +625,16 @@
         },
         {
             "name": "somoza/cli-auth",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gsomoza/cli-auth.git",
-                "reference": "0c1cca3d45cc052de77a000b1166270db89c5acd"
+                "reference": "0f357f1baeaa4a49ff3d124b7842cbe4a7a6f2b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gsomoza/cli-auth/zipball/0c1cca3d45cc052de77a000b1166270db89c5acd",
-                "reference": "0c1cca3d45cc052de77a000b1166270db89c5acd",
+                "url": "https://api.github.com/repos/gsomoza/cli-auth/zipball/0f357f1baeaa4a49ff3d124b7842cbe4a7a6f2b9",
+                "reference": "0f357f1baeaa4a49ff3d124b7842cbe4a7a6f2b9",
                 "shasum": ""
             },
             "require": {
@@ -665,7 +665,7 @@
                 }
             ],
             "description": "Quickly add OAuth2 authentication to your terminal app",
-            "time": "2019-06-17T21:38:31+00:00"
+            "time": "2019-06-18T01:10:22+00:00"
         },
         {
             "name": "somoza/composer-plugin-file-loader",
