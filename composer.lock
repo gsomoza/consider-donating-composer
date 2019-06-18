@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e7bce81944f29423d0145d62b735833",
+    "content-hash": "4d1da178c5849d2097b432727efafb94",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -625,16 +625,16 @@
         },
         {
             "name": "somoza/cli-auth",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gsomoza/cli-auth.git",
-                "reference": "9b32967871939c76d04a526af6dbbad5dc693ff4"
+                "reference": "0c1cca3d45cc052de77a000b1166270db89c5acd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gsomoza/cli-auth/zipball/9b32967871939c76d04a526af6dbbad5dc693ff4",
-                "reference": "9b32967871939c76d04a526af6dbbad5dc693ff4",
+                "url": "https://api.github.com/repos/gsomoza/cli-auth/zipball/0c1cca3d45cc052de77a000b1166270db89c5acd",
+                "reference": "0c1cca3d45cc052de77a000b1166270db89c5acd",
                 "shasum": ""
             },
             "require": {
@@ -644,6 +644,11 @@
                 "webmozart/assert": "^1.4"
             },
             "type": "library",
+            "extra": {
+                "donations": {
+                    "url": "https://www.patreon.com/somoza"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Somoza\\CliAuth\\": "src/"
@@ -660,20 +665,20 @@
                 }
             ],
             "description": "Quickly add OAuth2 authentication to your terminal app",
-            "time": "2019-06-17T21:30:01+00:00"
+            "time": "2019-06-17T21:38:31+00:00"
         },
         {
             "name": "somoza/composer-plugin-file-loader",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gsomoza/composer-plugin-file-loader.git",
-                "reference": "8628931301a5c477e6576039b98ec5da33f62e82"
+                "reference": "a544c9bb12422552c9db1f1a9afddabec90877ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gsomoza/composer-plugin-file-loader/zipball/8628931301a5c477e6576039b98ec5da33f62e82",
-                "reference": "8628931301a5c477e6576039b98ec5da33f62e82",
+                "url": "https://api.github.com/repos/gsomoza/composer-plugin-file-loader/zipball/a544c9bb12422552c9db1f1a9afddabec90877ca",
+                "reference": "a544c9bb12422552c9db1f1a9afddabec90877ca",
                 "shasum": ""
             },
             "require": {
@@ -685,7 +690,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Somoza\\ComposerPluginLoader\\": "src/"
+                    "Somoza\\ComposerPluginFileLoader\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -699,7 +704,7 @@
                 }
             ],
             "description": "Provides a trait for Composer plugins to help load any files that Composer would not autoload correctly. Workaround for composer/composer#8192",
-            "time": "2019-06-18T00:21:29+00:00"
+            "time": "2019-06-18T00:30:01+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
