@@ -1,10 +1,7 @@
 <?php
 namespace Somoza\ConsiderDonating\Command;
 
-use function file_get_contents;
 use Composer\Command\BaseCommand;
-use Psr\Http\Message\ServerRequestInterface;
-use React\Http\Response;
 use Somoza\CliAuth\AuthenticationResult;
 use Somoza\CliAuth\AuthServer;
 use Somoza\CliAuth\Server;
