@@ -21,8 +21,9 @@ final class DonationsPlugin implements PluginInterface, Capable
      */
     public function activate(Composer $composer, IOInterface $io)
     {
-        $packageFileLoader = new PackageFileLoader($composer);
-        $packageFileLoader->load(self::AUTOLOAD_FILES_PACKAGES);
+        // @see https://github.com/composer/composer/issues/8192
+        $vendorDir = $composer->getConfig()->get('vendor-dir');
+        require $vendorDir . '/autoload.php';
     }
 
     /**
