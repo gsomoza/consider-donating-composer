@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24bbe5a63f8c4432c74211d9879eed25",
+    "content-hash": "53193126bafbfb2ed4beac2c57a55cfe",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -666,45 +666,6 @@
             ],
             "description": "Quickly add OAuth2 authentication to your terminal app",
             "time": "2019-06-18T01:10:22+00:00"
-        },
-        {
-            "name": "somoza/composer-plugin-file-loader",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gsomoza/composer-plugin-file-loader.git",
-                "reference": "af6d2c5bc4ca6e426de6151cf17ebe3a65f4736d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gsomoza/composer-plugin-file-loader/zipball/af6d2c5bc4ca6e426de6151cf17ebe3a65f4736d",
-                "reference": "af6d2c5bc4ca6e426de6151cf17ebe3a65f4736d",
-                "shasum": ""
-            },
-            "require": {
-                "webmozart/assert": "^1.4"
-            },
-            "require-dev": {
-                "composer/composer": "^1.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Somoza\\ComposerPluginFileLoader\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gabriel Somoza",
-                    "email": "gabriel@somoza.me"
-                }
-            ],
-            "description": "Provides a trait for Composer plugins to help load any files that Composer would not autoload correctly. Workaround for composer/composer#8192",
-            "time": "2019-06-18T01:01:40+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1730,7 +1691,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-json": "*"
+        "ext-json": "*",
+        "composer-plugin-api": "^1.1"
     },
     "platform-dev": []
 }

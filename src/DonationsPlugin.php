@@ -6,7 +6,6 @@ use Composer\Plugin\PluginInterface;
 use Composer\Plugin\Capable;
 use Composer\Composer;
 use Composer\IO\IOInterface;
-use Somoza\ComposerPluginFileLoader\PackageFileLoader;
 use Somoza\ConsiderDonating\CommandProvider as DonationsCommandProvider;
 
 /**
